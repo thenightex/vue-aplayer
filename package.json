@@ -1,6 +1,6 @@
 {
   "name": "vue-aplayer",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Easy-to-use music player for Vue 2.x",
   "main": "dist/vue-aplayer.min.js",
   "files": [
@@ -11,8 +11,8 @@
   "scripts": {
     "start": "yarn run dev",
     "dev": "webpack-dev-server --inline --hot --progress --colors --host 0.0.0.0 --port 3000 --config webpack.demo.config.js",
-    "build": "export NODE_ENV=production && webpack --progress --hide-modules",
-    "build:demo": "export NODE_ENV=production && webpack --progress --hide-modules --config webpack.demo.config.js",
+    "build": "webpack --progress --hide-modules",
+    "build:demo": "webpack --progress --hide-modules --config webpack.demo.config.js",
     "prepublishOnly": "yarn run build",
     "predeploy": "yarn add hls.js && yarn run build:demo && echo 'vue-aplayer.js.org' > demo/CNAME",
     "lint": "eslint --ext .js,.vue src",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SevenOutman/vue-aplayer.git"
+    "url": "git+https://github.com/thenightex/vue-aplayer.git"
   },
   "keywords": [
     "vue",
@@ -36,6 +36,13 @@
     "email": "leishenghao@126.com",
     "url": "https://github.com/SevenOutman"
   },
+  "contributors": [
+      {
+        "name": "Sascha",
+        "email": "s.hanke1316@gmail.com",
+        "url": "https://github.com/thenightex"
+      }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/SevenOutman/vue-aplayer/issues"
@@ -45,13 +52,13 @@
     "vue": "^2.5.16"
   },
   "devDependencies": {
-    "autoprefixer": "8.6.5",
+    "autoprefixer": "9.0.2",
     "babel-core": "6.26.3",
     "babel-eslint": "8.2.6",
     "babel-loader": "7.1.5",
     "babel-preset-env": "1.7.0",
     "babel-preset-stage-2": "6.24.1",
-    "css-loader": "0.28.11",
+    "css-loader": "1.0.0",
     "cz-conventional-changelog": "2.1.0",
     "eslint": "5.2.0",
     "eslint-friendly-formatter": "4.0.1",
@@ -62,7 +69,7 @@
     "html-webpack-plugin": "3.2.0",
     "node-sass": "4.9.2",
     "postcss-loader": "2.1.6",
-    "sass-loader": "6.0.7",
+    "sass-loader": "7.0.3",
     "style-loader": "0.21.0",
     "svg-inline-loader": "0.8.0",
     "url-loader": "1.0.1",
@@ -70,8 +77,9 @@
     "vue-html-loader": "1.2.4",
     "vue-loader": "14.2.3",
     "vue-template-compiler": "2.5.16",
-    "webpack": "3.12.0",
-    "webpack-dev-server": "2.11.2"
+    "webpack": "4.16.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "3.1.5"
   },
   "browserslist": [
     "> 1%",
